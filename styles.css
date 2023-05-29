@@ -18,6 +18,7 @@ li{
   list-style-type: none;
 }
 
+
 .img-inicio{
   width: 100%;
   height: 100%;
@@ -76,6 +77,30 @@ header {
   margin-top: 10px;
   padding: 10px;
 }
+/* Estilos para pantallas grandes */
+.column {
+  display: grid;
+  width: 100%;
+  float: none;
+}
+
+/* Estilos para pantallas medianas, como tablets */
+@media (max-width: 800px) {
+  .column {
+    display: grid;
+    width: 100%;
+    float: left;
+  }
+}
+
+/* Estilos para pantallas pequeñas, como celulares */
+@media (max-width: 500px) {
+  .column {
+    display: grid;
+    width: 100%;
+    float: left;
+  }
+}
 .content {
   display: table;
   width: 100%;
@@ -86,9 +111,12 @@ header {
 }
 .perfil{
   border-radius: 5px;
+  height: 100%;
+  width: 100%;
   max-width: 400px;
   max-height: 300px;
 }
+
 .column {
   display: table-cell;
   width: 25%;
