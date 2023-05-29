@@ -85,7 +85,7 @@ header {
 }
 
 /* Estilos para pantallas medianas, como tablets */
-@media (max-width: 800px) {
+@media (max-width: 768) {
   .column {
     display: grid;
     width: 100%;
@@ -94,7 +94,7 @@ header {
 }
 
 /* Estilos para pantallas pequeñas, como celulares */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .column {
     display: grid;
     width: 100%;
