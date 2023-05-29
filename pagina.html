@@ -7,114 +7,189 @@
   <title>Mi página</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-  <header >
-    <nav>
-        <div class="navbar">
-          <div class="logo">
-           <a href="#inicio"> <img class="imagen" src="image/escudo.jpg" alt="Logo" ></a></img>
-          </div>
-          <ul>
-            <li><a href="#somos">¿Quienes Somos?</a></li>
-            <li><a href="#tema">Tema a tratar</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            
-          </ul>
-        </div>
-      </nav>
-      
+<body class="body">
+  <style>
+    /* Estilos para el menú hamburguesa */
+    .hamburguesa {
+      display: none; /* Ocultar el botón de hamburguesa en pantallas grandes */
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: rgb(8, 8, 8);
+      cursor: pointer;
+      padding: 8px;
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* Estilos para pantallas de tamaño de tablet o celular */
+      .navbar ul {
+        display: none; /* Ocultar la lista de enlaces en pantallas pequeñas */
+      }
+  
+      .navbar ul.show {
+        display: flex; /* Mostrar la lista de enlaces cuando se muestra el menú hamburguesa */
+        flex-direction: column;
+        background-color: #f8f5f5;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        margin-top: 8px;
+      }
+  
+      .navbar ul.show li {
+        margin-bottom: 8px;
+      }
+  
+      .hamburguesa {
+        display: block; /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+      }
+    }
+  </style>
+</head>
+<body class="body">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#inicio"><img class="imagen" src="image/escudo.jpg" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="#somos">¿Quienes Somos?</a></li>
+        <li><a href="#tema">Tema a tratar</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+      </ul>
+      <button class="hamburguesa">&#9776;</button>
+    </nav>
   </header>
-  <div class="titulo" id="somos">
-    <h1 id="inicio" >BIEN VENIDOS A VALIDACIÓN Y VERIFICACIÓN</h1>
-    <img class="img-inicio" src="image/universo.jpg" alt="">
+  
+  <!-- Resto del contenido de tu página -->
+  
+  <script>
+    // Función para manejar el clic en el botón de hamburguesa
+    function toggleMenu() {
+      var navbar = document.querySelector('.navbar ul');
+      navbar.classList.toggle('show');
+    }
+  
+    var hamburguesa = document.querySelector('.hamburguesa');
+    hamburguesa.addEventListener('click', toggleMenu);
+  </script>
+  <div class="titulo" >
+    <h1 id="inicio" >BIEN VENIDOS A VALIDACIÓN Y VERIFICACIÓN DE SOFTWARE</h1>
+    <img class="img-inicio" src="image/isometric-style-illustration-of-checking-valid-data-free-vector.jpg" alt="">
 </div>
     <div class="somos" id="somos">
         <h1>¿Quienes Somos?</h1>
          <p>¡Hola a todos! Somos un grupo de estudiantes de la Tecnicatura en Desarrollo de Software, estamos cursando la materia Validación y Verificación de Software. Estamos aquí para compartir nuestro conocimiento y ayudarte a comprender la importancia de estos procesos en el desarrollo de software. Explora nuestro sitio web para obtener información y recursos útiles sobre este tema. ¡Bienvenidos a nuestro mundo de Validación y Verificación en el Desarrollo de Software!</p>
         <div class="content">
             <div class="column">
-                <img src="image/astronauta.jpg" class="perfil" alt="Imagen 1">
+                <img src="image/andres.jpg" class="perfil" alt="Imagen 1">
                 <h3>Andres Santa</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
+                  <li><strong> Edad: </strong> </li>
+                  <li><strong> Estudios:  </strong>Tecnico en Desarrollo de Software </li>
+                  <li><strong> Habilidades:</strong> </li>
                 </div>
                 <div class="column">
-                <img src="image/espada.jpg" class="perfil" alt="Imagen 2">
+                <img src="image/facu.jpg" class="perfil" alt="Imagen 2">
                 <h3>Facundo Allende</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
+                 <li><strong> Edad: </strong></li>
+                 <li><strong> Estudios: </strong>Tecnico en Desarrollo de Software </li>
+                 <li><strong> Habilidades: </strong></li>
                 </div>
                 <div class="column">
-                <img src="image/spider.jpg" class="perfil" alt="Imagen 3">
+                <img src="image/mirko.jpg" class="perfil" alt="Imagen 3">
                 <h3>Mirko Numero</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
+                  <li><strong>Edad:</strong> </li>
+                  <li><strong>Estudios:</strong> Tecnico en Desarrollo de Software </li>
+                  <li><strong>Habilidades:</strong> </li>
                 </div>
                 <div class="column">
-                <img src="image/universo.jpg" class="perfil" alt="Imagen 4">
+                <img src="image/Curriculo nuevo.jpg" class="perfil" alt="Imagen 4">
                 <h3>Nahuel Rosso</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
+                  <li><strong>Edad:</strong> 27</li>
+                  <li><strong>Estudios:</strong> Tecnico en Desarrollo de Software </li>
+                  <li><strong>Habilidades:</strong>Comunicación efectiva, Trabajo en equipo, Resolución de problemas, Pensamiento crítico, Adaptabilidad y flexibilidad, Gestión del tiempo, Resiliencia, Curiosidad y aprendizaje continuo </li>
             </div>
        </div>
     </div>
     <div class="tema" id="tema">
         <div class="t-box">
-            <h1>Tema a tratar</h1>
-            <p></p>
+            <h1>Cliclo de Vida en Espiral</h1>
+            <p>El ciclo de vida en espiral (SDLC) es un enfoque iterativo para el desarrollo de software que integra actividades de validación y verificación de programas. Se organiza en etapas que incluyen la planificación, el análisis de riesgos, el desarrollo, la validación y la evaluación.
+
+             <p> En la etapa de planificación, se establecen los objetivos del proyecto y se definen los requisitos del software. También se determina la estrategia de validación y verificación de programas, que es esencial para garantizar la calidad. Durante esta etapa, se recopilan los requisitos de validación y se definen los criterios de aceptación.</p>
+              
+              <p>En el análisis de riesgos, se identifican y evalúan los riesgos asociados al desarrollo del software. Se realizan análisis detallados y se establecen estrategias para mitigarlos. Esto es crucial en la validación y verificación de programas, ya que se deben identificar posibles errores o fallas y tomar medidas preventivas.</p>
+              
+              <p>La etapa de desarrollo implica la creación del software, donde se implementan los requisitos definidos en la etapa de planificación. Se realizan pruebas unitarias y de integración para validar y verificar el funcionamiento correcto del programa.</p>
+              
+              <p> La validación y verificación de programas son actividades clave en el SDLC en espiral. En la etapa de validación, se verifican los requisitos establecidos y se realizan pruebas exhaustivas para asegurar que el software cumpla con los estándares de calidad. La etapa de verificación se enfoca en revisar y evaluar el proceso de desarrollo en sí, analizando los resultados de las pruebas y evaluando la efectividad de las estrategias de validación utilizadas.</p>
+              
+              <p> La evaluación es la última etapa, donde se revisa el software, se recopilan los comentarios de los usuarios y se realiza una evaluación global del proyecto. Esta retroalimentación se utiliza para mejorar futuras versiones del software y para alimentar el ciclo de vida en espiral. </p>
+              
+              <p>En resumen, el SDLC en espiral es un enfoque iterativo que integra actividades de validación y verificación de programas. Consta de etapas de planificación, análisis de riesgos, desarrollo, validación y evaluación. La validación y verificación son cruciales para garantizar la calidad del software, y la retroalimentación continua permite mejoras constantes en futuras iteraciones. </p>   
+              
+              </p>
         </div>
     </div>
     <div class="beneficios" id="beneficios">
-        <h1>Beneficios de la Verificación y Validación</h1>
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis id pariatur ullam ab quod minus impedit voluptate eveniet ut nulla. Illo cumque distinctio eius eum ipsum. Aspernatur reprehenderit id rem?</p>
+        <h1>Beneficios de la Verificación y Validación con el MODELO EN ESPIRAL</h1>
+         <p>La validación y verificación de software garantizan la calidad y confiabilidad del programa. Al utilizar el modelo en espiral, se obtienen beneficios adicionales. La validación asegura que el software cumpla con requisitos y expectativas del usuario, mientras que la verificación revisa el proceso de desarrollo. Los beneficios incluyen software más confiable, eficiente y seguro, reduciendo costos y riesgos. Mejora la satisfacción del usuario, generando confianza y una mejor experiencia. El modelo en espiral permite retroalimentación continua y adaptación temprana, abordando errores de validación y verificación de manera más efectiva y reduciendo su persistencia. En resumen, validación y verificación garantizan calidad y el modelo en espiral ofrece mejoras adicionales en el proceso de desarrollo.</p>
         <div class="content">
             <div class="column">
-                <img src="image/astronauta.jpg" class="perfil" alt="Imagen 1">
-                <h3>Benficios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
-                </div>
-                <div class="column">
-                <img src="image/espada.jpg" class="perfil" alt="Imagen 2">
-                <h3>Beneficios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
-                </div>
-                <div class="column">
-                <img src="image/spider.jpg" class="perfil" alt="Imagen 3">
-                <h3>Beneficios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
-                </div>
-                <div class="column">
-                <img src="image/universo.jpg" class="perfil" alt="Imagen 4">
-                <h3>Beneficios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam. Corporis, quae perspiciatis laborum sequi mollitia voluptatum. Nostrum nesciunt deserunt dolor nobis corrupti corporis a est doloribus illum optio. Delectus.</p>
+                <img src="image/riesgo.jpg" class="im-beneficios" alt="Imagen 1">
+                <h3>Gestión de riesgos</h3>
+                <p>El modelo en espiral está diseñado para abordar y mitigar los riesgos asociados con el desarrollo de software. Cada ciclo en espiral incluye una fase de evaluación de riesgos, lo que permite identificar y abordar los problemas potenciales antes de que se conviertan en problemas graves.</p>
             </div>
+                <div class="column">
+                <img src="image/adaptabilidad.jpg" class="im-beneficios" alt="Imagen 2">
+                <h3>Adaptabilidad</h3>
+                <p>El modelo en espiral es altamente adaptable y flexible. Permite ajustar el enfoque y los requisitos a medida que se avanza en el proceso de desarrollo. Esto es especialmente útil cuando los requisitos del proyecto son inciertos o cambian con el tiempo.</p>
+                </div>
+                <div class="column">
+                <img src="image/mejoras.jgp.jpg" class="im-beneficios" alt="Imagen 3">
+                <h3>Mejora continua</h3> 
+                <p> La naturaleza iterativa del modelo en espiral facilita la mejora continua del producto y del proceso de desarrollo. Cada ciclo en espiral permite realizar pruebas, obtener retroalimentación y realizar ajustes antes de pasar a la siguiente iteración.</p>
+              </div>
+              <div class="column">
+                <img src="image/Participación temprana de los interesados.jpg" class="im-beneficios" alt="Imagen 4">
+                <h3>Participación temprana de los interesados </h3>
+                <p>El modelo en espiral fomenta la participación temprana de los interesados en el proceso de desarrollo. En cada ciclo, los interesados pueden proporcionar comentarios y sugerencias, lo que ayuda a garantizar que el producto final cumpla con sus expectativas y requisitos.</p>
+              </div>
+              </div>
+              <div class="column">
+                <img src="image/visibilidad.jpg" class="im-beneficios" alt="Imagen 4">
+                <h3>Mayor visibilidad y control</h3>
+                <p>Al utilizar el modelo en espiral, se obtiene una mayor visibilidad y control sobre el proceso de desarrollo. Cada ciclo en espiral se planifica y ejecuta de forma independiente, lo que permite un seguimiento más preciso del progreso y una toma de decisiones informada.</p>
+              </div>
+              <div class="column">
+                <img src="image/aprendizaje.jpg" class="im-beneficios" alt="Imagen 4">
+                <h3>Aprendizaje temprano</h3>
+                <p>El modelo en espiral permite aprender de las experiencias anteriores y aplicar ese conocimiento en ciclos posteriores. Cada ciclo en espiral incluye una fase de revisión y reflexión, lo que facilita la identificación de áreas de mejora y la implementación de lecciones aprendidas.
+
+                </p>
+              </div>
+              <div class="column">
+                <img src="image/Priorización de características.jpg" class="im-beneficios" alt="Imagen 4">
+                <h3>Priorización de características</h3>
+                <p>El modelo en espiral permite priorizar las características y funcionalidades más críticas o de mayor valor en las primeras iteraciones. Esto significa que se pueden desarrollar y entregar las características más importantes antes, lo que agrega valor al producto desde etapas tempranas.</p>
+              </div>
+              <div class="column">
+                <img src="image/exito-negocio-transformacion-digital.jpg" class="im-beneficios" alt="Imagen 4">
+                <h3>Menor riesgo de fracaso</h3>
+                <p>Debido a su enfoque en la gestión de riesgos y la adaptabilidad, el modelo en espiral tiene un menor riesgo de fracaso en comparación con otros modelos de SDLC más lineales. La identificación temprana de problemas y la toma de decisiones informada ayudan a evitar costosos errores o desviaciones significativas.</p>
+              </div>
+              <p>Recuerda que el modelo en espiral es solo uno de los enfoques dentro del Ciclo de Vida del Desarrollo de Software y su aplicabilidad puede depender de las características y requisitos específicos de cada proyecto. Siempre es importante evaluar y adaptar el enfoque según las necesidades del proyecto y del equipo de desarrollo.</p>
        </div>
     </div>
 </body>
 <footer id="contacto">
     <div class="columna">
-      <h3 class="f-title">Direcciones</h3>
-      <ul>
-        <li>Dirección 1</li>
-        <li>Dirección 2</li>
-        <li>Dirección 3</li>
-      </ul>
+      <p>Derechos de Autor © 2023 Andres Santa, Facundo Allende, Mirko Numero, Nahuel Rosso</p>
     </div>
     
-    <div class="columna">
-      <h3 class="f-title">Números de teléfono</h3>
-      <ul>
-        <li>Teléfono 1</li>
-        <li>Teléfono 2</li>
-        <li>Teléfono 3</li>
-      </ul>
-    </div>
     
-    <div class="columna">
-      <h3 class="f-title">Redes sociales</h3>
-      <ul>
-        <li><a href="enlace-a-red-social-1">Red Social 1</a></li>
-        <li><a href="enlace-a-red-social-2">Red Social 2</a></li>
-        <li><a href="enlace-a-red-social-3">Red Social 3</a></li>
-      </ul>
-    </div>
   </footer>
   
 </html>
